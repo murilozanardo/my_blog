@@ -1,0 +1,12 @@
+<div>
+<%= button_to 'Voltar para todos os posts', posts_path, method: :get %>
+<br />
+
+<%= button_to 'Criar novo post', new_post_path, method: :get %>
+</div>
+<div>
+  <div><h2>Meus posts</h2></div>
+<% @posts.each do |post| %>
+  <%= render partial: 'posts/post_template', locals: { post: post} %>
+<% end %>
+</div>

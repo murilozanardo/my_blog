@@ -1,0 +1,8 @@
+<div>
+  <%= button_to 'Voltar para todos os posts', posts_path, method: :get %>
+</div>
+<h1>
+  Novo Post
+</h1>
+
+<%= render partial: 'posts/form', locals: { post: @post } %>

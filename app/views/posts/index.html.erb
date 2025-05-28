@@ -1,0 +1,13 @@
+<div>
+  <%= button_to 'Meus Posts', my_posts_path, method: :get%>
+</div>
+<div>
+  <%= button_to 'Initial Page', root_path, method: :get%>
+</div>
+
+
+<div>
+  <% @posts.each do |post| %>
+    <%= render partial: 'posts/post_template', locals: { post: post} %>
+  <% end %>
+</div>
